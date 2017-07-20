@@ -13,7 +13,7 @@ func main() {
 	app.Version = Version
 	app.Author = "diogomonica"
 	app.Email = "diogo.monica@gmail.com"
-	app.Usage = "linked-air import TABLE FILE"
+	app.Usage = "linked-air cmd"
 
 	app.Commands = Commands
 	app.CommandNotFound = CommandNotFound

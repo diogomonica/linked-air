@@ -28,10 +28,6 @@ func CmdImportCompanies(c *cli.Context) error {
 		panic(err)
 	}
 
-	// for _, contact := range contacts {
-	//PrettyPrint(contact)
-	// }
-
 	csvFile, _ := os.Open(c.Args()[0])
 	reader := csv.NewReader(bufio.NewReader(csvFile))
 
@@ -96,8 +92,6 @@ func CmdImportContacts(c *cli.Context) error {
 	if err != nil {
 		panic(err)
 	}
-
-	client.
 
 	csvFile, _ := os.Open(c.Args()[0])
 	reader := csv.NewReader(bufio.NewReader(csvFile))

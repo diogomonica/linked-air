@@ -9,13 +9,24 @@ var (
 type Contact struct {
 	AirtableID string `json:"id,omitempty"`
 	Fields     struct {
-		Email    string   `json:"Email"`
-		First    string   `json:"First"`
-		Last     string   `json:"Last"`
-		Title    string   `json:"Title"`
-		Company  []string `json:"Company"`
-		Linkedin string   `json:"Linkedin"`
-		Comments string   `json:"Comments"`
+		Email       string   `json:"Email"`
+		First       string   `json:"First"`
+		Last        string   `json:"Last"`
+		Title       string   `json:"Title"`
+		Company     []string `json:"Company"`
+		Linkedin    string   `json:"Linkedin"`
+		Comments    string   `json:"Comments"`
+		LastContact string   `json:"Last Contact"`
+	} `json:"fields"`
+}
+
+// HumanEmail represents a single record in the `All Emails` Airtable table
+type HumanEmail struct {
+	AirtableID string `json:"id,omitempty"`
+	Fields     struct {
+		Email  string `json:"Email"`
+		Human  bool   `json:"Human"`
+		Ignore bool   `json:"Ignore"`
 	} `json:"fields"`
 }
 
